@@ -1,0 +1,15 @@
+{
+"name":"tools",
+"version":"0.0.1",
+"description":"Extension for MGspace",
+"license":"MIT",
+"dependencies":{
+"core":"*"
+},
+"files":[
+"README.md",
+"main.ts",
+"_locales/zh/mgspace-strings.json"
+],
+"public":true
+}
