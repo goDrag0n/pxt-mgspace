@@ -2,11 +2,11 @@
 
 Extension for mgspace
 
-##License
+## License
 
 MIT
 
-##Supported targets
+## Supported targets
 
 * for PXT/microbit
 (the metadata above is needed for package search.)
