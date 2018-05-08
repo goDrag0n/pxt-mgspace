@@ -8,7 +8,7 @@ MIT
 
 ##Supported targets
 
-*for PXT/microbit
+* for PXT/microbit
 (the metadata above is needed for package search.)
 
 mgspace=github:goDrag0n/pxt-mgspace
