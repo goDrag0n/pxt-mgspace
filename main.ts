@@ -25,6 +25,7 @@ namespace mgspace{
 //% blockId="BY8301" block="BY8301 cmd %cmd"
 //% blockGap=2 weight=1 blockExternalInputs=false
   export function BY8301(cmd:number){
+    basic.showNumber(0);
     let temp=0x7e;
     serial.writeString(temp);
     temp=0x03;
