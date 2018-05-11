@@ -6,7 +6,7 @@ namespace mgspace{
 */
 //% blockId="SR04" block="SR04 Trig %Trig|Echo %Echo"
 //% blockGap=2 weight=0 blockExternalInputs=true
-export function SR04(Trig: DigitalPin, Echo: DigitalPin): number {
+  export function SR04(Trig: DigitalPin, Echo: DigitalPin): number {
   pins.digitalWritePin(Trig,1);
   control.waitMicros(20);
   pins.digitalWritePin(Trig,0);
@@ -21,4 +21,20 @@ export function SR04(Trig: DigitalPin, Echo: DigitalPin): number {
   const distance = input.runningTimeMicros() - tim;
   distance = distance / 58;
   return distance;
+  }
+//% blockId="BY8301" block="BY8301 cmd %cmd"
+//% blockGap=2 weight=1 blockExternalInputs=false
+  export function BY8301(cmd:number){
+    let temp=0x7e;
+    serial.writeString(temp);
+    temp=0x03;
+    serial.writeString(temp);
+    temp=number;
+    serial.writeString(temp);
+    temp=0x00;
+    temp=0x03^number;
+    serial.writeString(temp);
+    temp=0xef;
+    serial.writeString(temp);    
+  }
 }
