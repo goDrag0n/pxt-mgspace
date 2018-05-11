@@ -26,16 +26,16 @@ namespace mgspace{
 //% blockGap=2 weight=1 blockExternalInputs=false
   export function BY8301(cmd:number): void {
     basic.showNumber(0);
-    let temp=0x7e;
+    let temp=0x7e
     serial.writeString(temp);
-    temp=0x03;
+    temp=0x03
     serial.writeString(temp);
-    temp=number;
+    temp=number
     serial.writeString(temp);
-    temp=0x00;
-    temp=0x03^number;
+    temp=0x00
+    temp=0x03^number
     serial.writeString(temp);
-    temp=0xef;
+    temp=0xef
     serial.writeString(temp);
   }
 }
