@@ -1,0 +1,10 @@
+{
+  /*"mgspace|block":"麦高",
+  "mgspace.SR04|block":"超声波 触发口 %Trig|接收口 %Echo",
+  "mgspace.BY8301|block": "mp3模块 指令 %cmd"
+  "mgspace.ledOfRectangle": "LED显示长方形面积 长 %length|宽 %width"
+  */
+  "tools|block": "工具",
+    "tools.areaOfRectangle|block": "長方形面積 長 %length|寬 %width",
+    "tools.ledOfRectangle|block": "LED顯示長方形面積 長 %length|寬 %width"
+}
