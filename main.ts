@@ -48,7 +48,7 @@ namespace mgspace{
 }
 */
 //% weight=0 color=#0033FF icon="\uf2a2" block="mgspace"
-namespace tools {
+namespace mgspace {
     /**
     * 計算長方形面積，並回傳
     */
