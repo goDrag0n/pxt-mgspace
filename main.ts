@@ -38,4 +38,9 @@ namespace mgspace{
     temp=0xef
     serial.writeString(temp);
   }
+//% blockId="ledOfRectangle" block="show area of rectangle length %length|width %width"
+//% blockGap=2 weight=1
+    export function ledOfRectangle(length:number, width:number):void {
+        basic.showNumber(length*width)
+    }
 }
