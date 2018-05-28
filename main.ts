@@ -1,8 +1,8 @@
-//&weight=0 color=#0033FF icon="\uf2a2" block="mgspace"
+//% weight=0 color=#0033FF icon="\uf2a2" block="mgspace"
 
 namespace mgspace{
 /**
-*³¬Éù²¨Ä£¿éSR04²â¾à
+*超声波SR04
 */
 //% blockId="SR04" block="SR04 Trig %Trig|Echo %Echo"
 //% blockGap=2 weight=0 blockExternalInputs=true
