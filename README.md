@@ -1,6 +1,6 @@
 # mgspace
 
-Extension for mgspace
+Extension for MGspace
 
 ## License
 

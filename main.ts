@@ -3,7 +3,7 @@
 namespace mgspace{
 /**
 *超声波SR04
-*/
+
 //% blockId="SR04" block="SR04 Trig %Trig|Echo %Echo"
 //% blockGap=2 weight=0 blockExternalInputs=true
   export function SR04(Trig: DigitalPin, Echo: DigitalPin): number {
@@ -38,6 +38,7 @@ namespace mgspace{
     temp=0xef
     serial.writeString(temp);
   }
+    */
 //% blockId="ledOfRectangle" block="show area of rectangle length %length|width %width"
 //% blockGap=2 weight=1
     export function ledOfRectangle(length:number, width:number):void {
