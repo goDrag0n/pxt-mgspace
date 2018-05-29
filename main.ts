@@ -60,8 +60,9 @@ namespace mgspace {
             SerialPin.P1,
             BaudRate.BaudRate115200
         )
-        /*serial.writeString(temp);
+        serial.writeString(temp);
         temp = 0x03
+        /*
         serial.writeString(temp);
         temp = cmd
         serial.writeString(temp);
