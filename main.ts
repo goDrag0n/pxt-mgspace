@@ -75,11 +75,12 @@ namespace mgspace {
 
         while (pins.digitalReadPin(echo) == 0 && input.runningTimeMicros() - t < 20000) {
         }
-        /*
-        tim = input.runningTimeMicros();
-        while (pins.digitalReadPin(Echo) == 1 && input.runningTimeMicros() - tim < 20000) {
+        t = input.runningTimeMicros();
+        
+        while (pins.digitalReadPin(echo) == 1 && input.runningTimeMicros() - t < 20000) {
         }
-        const distance = input.runningTimeMicros() - tim;
+        /*
+        const distance = input.runningTimeMicros() - t;
         */
        // distance = distance / 58;
         return t*10/6/58;
