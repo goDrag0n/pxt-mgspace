@@ -62,7 +62,7 @@ namespace mgspace {
         )
         serial.writeString(temp);
         temp = 0x03
-        /*
+        
         serial.writeString(temp);
         temp = cmd
         serial.writeString(temp);
@@ -71,6 +71,6 @@ namespace mgspace {
         serial.writeString(temp);
         temp = 0xef
         serial.writeString(temp);
- */   
-        }
+   
+    }
 }
