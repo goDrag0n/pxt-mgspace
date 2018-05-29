@@ -73,7 +73,7 @@ namespace mgspace {
         pins.digitalWritePin(trig, 0);
         let t = input.runningTimeMicros();
 
-        while (pins.digitalReadPin(echo) == 0 && input.runningTimeMicros() - tim < 20000) {
+        while (input.runningTimeMicros() - t < 20000) {
         }
         /*
         tim = input.runningTimeMicros();
