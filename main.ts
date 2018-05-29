@@ -3,28 +3,7 @@
 
 namespace mgspace{
 
-//% blockId="BY8301" block="BY8301 cmd %cmd"
-//% blockGap=2 weight=1 blockExternalInputs=false
-  export function BY8301(cmd:number): void {
-    basic.showNumber(0);
-    let temp=0x7e
-    serial.writeString(temp);
-    temp=0x03
-    serial.writeString(temp);
-    temp=number
-    serial.writeString(temp);
-    temp=0x00
-    temp=0x03^number
-    serial.writeString(temp);
-    temp=0xef
-    serial.writeString(temp);
-  }
-    
-//% blockId="ledOfRectangle" block="show area of rectangle length %length|width %width"
-//% blockGap=2 weight=1
-    export function ledOfRectangle(length:number, width:number):void {
-        basic.showNumber(length*width)
-    }
+
 }
 */
 //% weight=0 color=#0033FF icon="\uf2a2" block="mgspace"
@@ -68,5 +47,22 @@ namespace mgspace {
         
         d = d/ 58;
         return d;
+    }
+
+    //% blockId="BY8301" block="BY8301 cmd %cmd"
+    //% blockGap=2 weight=1 blockExternalInputs=false
+    export function BY8301(cmd: number): void {
+        basic.showNumber(0);
+        let temp = 0x7e
+        serial.writeString(temp);
+        temp = 0x03
+        serial.writeString(temp);
+        temp = cmd
+        serial.writeString(temp);
+        temp = 0x00
+        temp = 0x03 ^ cmd
+        serial.writeString(temp);
+        temp = 0xef
+        serial.writeString(temp);
     }
 }
