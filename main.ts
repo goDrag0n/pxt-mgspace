@@ -71,10 +71,11 @@ namespace mgspace {
         pins.digitalWritePin(trig,1);
         control.waitMicros(20);
         pins.digitalWritePin(trig, 0);
-        let t = pins.pulseIn(echo, PulseValue.High, 25000);
+        let t = input.runningTimeMicros();
 
-        /*while (pins.digitalReadPin(Echo) == 0 && input.runningTimeMicros() - tim < 20000) {
+        while (pins.digitalReadPin(echo) == 0 && input.runningTimeMicros() - tim < 20000) {
         }
+        /*
         tim = input.runningTimeMicros();
         while (pins.digitalReadPin(Echo) == 1 && input.runningTimeMicros() - tim < 20000) {
         }
