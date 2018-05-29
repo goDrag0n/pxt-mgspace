@@ -54,7 +54,13 @@ namespace mgspace {
     export function BY8301(cmd: number): void {
         basic.showNumber(0);
         let temp = 0x7e
-        serial.writeString(temp);
+
+        serial.redirect(
+            SerialPin.P0,
+            SerialPin.P1,
+            BaudRate.BaudRate115200
+        )
+        /*serial.writeString(temp);
         temp = 0x03
         serial.writeString(temp);
         temp = cmd
@@ -64,5 +70,6 @@ namespace mgspace {
         serial.writeString(temp);
         temp = 0xef
         serial.writeString(temp);
-    }
+ */   
+        }
 }
