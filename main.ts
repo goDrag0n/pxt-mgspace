@@ -3,26 +3,6 @@
 
 namespace mgspace{
 
-*超声波SR04
-
-//% blockId="SR04" block="SR04 Trig %Trig|Echo %Echo"
-//% blockGap=2 weight=0 blockExternalInputs=true
-  export function SR04(Trig: DigitalPin, Echo: DigitalPin): number {
-  pins.digitalWritePin(Trig,1);
-  control.waitMicros(20);
-  pins.digitalWritePin(Trig,0);
-  const tim=input.runningTimeMicros();
-  while(pins.digitalReadPin(Echo)==0 && input.runningTimeMicros()-tim<20000)
-  {
-  }
-  tim=input.runningTimeMicros();
-  while(pins.digitalReadPin(Echo)==1 && input.runningTimeMicros()-tim<20000)
-  {
-  }
-  const distance = input.runningTimeMicros() - tim;
-  distance = distance / 58;
-  return distance;
-  }
 //% blockId="BY8301" block="BY8301 cmd %cmd"
 //% blockGap=2 weight=1 blockExternalInputs=false
   export function BY8301(cmd:number): void {
@@ -50,7 +30,7 @@ namespace mgspace{
 //% weight=0 color=#0033FF icon="\uf2a2" block="mgspace"
 namespace mgspace {
     /**
-    * 計算長方形面積，並回傳
+    * 计算长方形面积并回传
     */
     //% blockId="areaOfRectangle" block="area of rectangle length %length|width %width"
     //% blockGap=2 weight=0 blockExternalInputs=true
@@ -65,6 +45,10 @@ namespace mgspace {
     export function ledOfRectangle(length: number, width: number): void {
         basic.showNumber(length * width)
     }
+
+    /*
+    *超声波SR04
+    */
     //% blockId="SR04" block="SR04 trig %trig|echo %echo"
     //% weight=10
     export function SR04(trig: DigitalPin, echo: DigitalPin): number {
@@ -79,10 +63,10 @@ namespace mgspace {
         
         while (pins.digitalReadPin(echo) == 1 && input.runningTimeMicros() - t < 20000) {
         }
-        /*
-        const distance = input.runningTimeMicros() - t;
-        */
-       // distance = distance / 58;
-        return t*10/6/58;
+        
+        let d= input.runningTimeMicros() - t;
+        
+        d = d/ 58;
+        return d;
     }
 }
