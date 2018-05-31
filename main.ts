@@ -72,12 +72,4 @@ namespace mgspace {
         serial.writeString(temp);
    
     }
-
-    //% blockId="chartonumber" block="chartonumber c %c"
-    //% weight=5
-    export function chartonumber(c: string): number {
-        let n = c.charAt(0);
-        basic.showNumber(n);
-        return n;
-    }
 }
